@@ -4,5 +4,9 @@
     .img-title
       %h1.text-center
         Alice & Abhi
-      %h3.text-center
+      %h2.text-center
         27th June 2015
+.row
+  .col-xs-12.col-sm-12.col-md-12
+    - unless has_access?
+      = link_to "Login", login_path , class: "btn btn-general"

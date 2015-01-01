@@ -7,5 +7,7 @@
         %span.icon-bar
     .navbar-collapse.collapse
       %ul.nav.navbar-nav.navbar-right
-        %li= link_to 'home', '#'
+        %li= link_to 'home', root_path
         %li= link_to 'blog', '#'
+        - if Rails.env.development? && has_access?
+          %li= link_to 'logout', logout_path, method: "delete"
