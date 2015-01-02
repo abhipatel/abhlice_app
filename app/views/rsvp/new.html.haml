@@ -1,0 +1,23 @@
+.row
+  .col-cs-12.col-sm-12.col-md-12
+    %h1 RSVP
+    %p Let us know if you're coming along.
+  .col-xs-12.col-sm-6.col-sm-offset-1.col-md-6.col-md-offset-1
+    = form_for(@rsvp, url: rsvp_path) do |f|
+      = render 'shared/error_messages', object: @rsvp
+      .form-group
+        .radio
+          %label
+            %input#optionsRadios1{:checked => "", :name => "rsvp[is_attending]", :type => "radio", :value => "true"}
+              Attending
+        .radio
+          %label
+            %input#optionsRadios2{:name => "rsvp[is_attending]", :type => "radio", :value => "false"}
+              Not Attending
+      .form-group
+        %label.control-label{:for => "rsvpInputNames"} Names
+        %input#rsvpInputNames.form-control{:placeholder => "Comma separated list of people that are or are not coming", :type => "text", :name => "rsvp[names]"}
+      .form-group
+        %label.control-label{:for => "rsvpInputComments"} Comments
+        %textarea#rsvpInputCommentss.form-control{:placeholder => "E.g. Let us know if anyone is intollerant or allergic to anything or you can only make part of the day.", :type => "text", :name => "rsvp[comments]", :rows => 5}
+      = f.submit "Submit", class: 'btn btn-general'
