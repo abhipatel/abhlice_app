@@ -11,6 +11,9 @@ gem 'turbolinks',           '2.3.0'
 gem 'jbuilder',             '2.2.3'
 gem 'sdoc',                 '0.4.0', group: :doc
 gem 'haml-rails',           '0.5.3'
+gem 'gmaps4rails'
+gem 'bower'
+gem 'rails-backbone', github: 'codebrew/backbone-rails', branch: 'master'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
