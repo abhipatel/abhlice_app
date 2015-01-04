@@ -1,11 +1,3 @@
-.row
-  .col-xs-12.col-sm-12.col-md-12
-    = image_tag "background/jersey.jpg", class: 'img-responsive'
-    .img-title
-      %h1.text-center
-        Alice & Abhi
-      %h2.text-center
-        27th June 2015
 - if has_access?
   = render "logged_in_home"
 - else

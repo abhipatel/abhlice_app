@@ -1,10 +1,30 @@
 .row
-  .col-xs-12.col-sm-12.col-md-12
-    %h3
-      Venue
-    #venue-map
-.row
-  .col-xs-12.col-sm-12.col-md-12
-    %h3
-      RSVP
-    = link_to "RSVP", rsvp_path , class: "btn btn-general"
+  .col-xs-1.col-sm-2.col-md-2#target-nav
+    %ul.nav.nav-pills.nav-stacked.nav-home{"data-offset-bottom" => "200", "data-offset-top" => "20", "data-spy" => "affix"}
+      %li.active= link_to "RSVP", "#rsvp"
+      %li= link_to "Venue", "#venue"
+      %li= link_to "Places to stay", "#accomodation"
+      %li= link_to "Attire", "#attire"
+  .col-xs-11.col-sm-9.col-md-9
+    .row
+      .col-xs-12.col-sm-12.col-md-12
+        %h3#rsvp
+          RSVP
+        = link_to "RSVP", rsvp_path , class: "btn btn-primary btn-general"
+    .row
+      .col-xs-12.col-sm-12.col-md-12
+        %h3#venue
+          Venue
+        #venue-map
+    .row
+      .col-xs-12.col-sm-12.col-md-12
+        %h3#accomodation
+          Places to stay
+        %p
+          Places to stay in Farnham....
+    .row
+      .col-xs-12.col-sm-12.col-md-12
+        %h3#attire
+          Attire
+        %p
+          Types of Indian clothes....

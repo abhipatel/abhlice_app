@@ -1,3 +1,14 @@
 .row
   .col-xs-12.col-sm-12.col-md-12
-    = link_to "Login", login_path , class: "btn btn-general"
+    = image_tag 'background/jersey.jpg', class: 'img-responsive'
+    .img-title
+      .row
+        .col-xs-11.col-xs-offset-1.col-sm-11.col-sm-offset-1.col-md-11.col-md-offset-1
+          %h1
+            Alice & Abhi
+      .row
+        = form_for(:session, url: login_path) do |f|
+          .col-xs-5.col-xs-offset-1.col-sm-4.col-sm-offset-1.col-md-4.col-md-offset-1
+            = f.text_field :password, placeholder: 'Enter password', class: 'form-control opaque'
+          .col-xs-6.col-sm-7.col-md-7
+            = f.submit "Enter", class: 'btn btn-general opaque'

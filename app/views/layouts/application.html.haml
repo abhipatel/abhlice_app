@@ -9,10 +9,8 @@
     = csrf_meta_tags
     = render 'layouts/shim'
     = render 'layouts/header'
-  %body
+  %body{"data-spy" => "scroll", "data-target" => "#target-nav", "offset" => "70"}
     .container-fluid.body-content
-      .row
-        .col-xs-12.col-sm-10.col-md-10.center-block
-          = render 'shared/flash_messages'
-          = yield
+      = render 'shared/flash_messages'
+      = yield
     = debug(params) if Rails.env.development?

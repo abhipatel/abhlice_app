@@ -10,8 +10,8 @@ class SessionsController < ApplicationController
       flash[:success] = 'Thanks for getting involved!'
       redirect_to root_path
     else
-      flash.now[:danger] = 'Invalid password'
-      render 'new'
+      flash[:danger] = 'Invalid password'
+      redirect_to root_path
     end
   end
 

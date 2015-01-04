@@ -2,31 +2,89 @@
 
 .navbar
   border-width: 0
-  background-color: #E01818
 
 .navbar-default .navbar-nav > li > a
-  color: white
+  font-family: "Zebrazil", sans-serif
+  font-size: 2em
+  color: #E07418
   &:hover, &:focus
-    color: white
+    color: #E07418
+
+// Nav ========================================================================
+
+.nav-pills >
+  .active > a
+    font-family: "Zebrazil", sans-serif
+    font-size: 1.5em
+    text-decoration: none
+    font-weight: bold
+    border-radius: 0px
+    border-left-width: 4px
+    border-left-style: solid
+    border-left-color: #FF6600
+    color: #E07418 !important
+    background-color: transparent !important
+    &:hover, &:active, &:focus
+      text-decoration: none
+      font-weight: bold
+      border-radius: 0px
+      border-left-width: 4px
+      border-left-style: solid
+      border-left-color: #FF6600
+      color: #E07418 !important
+      background-color: transparent !important
+  li > a
+    color: #E07418
+    font-family: "Zebrazil", sans-serif
+    font-size: 1.5em
+    &:hover, &:active, &:focus
+      text-decoration: none
+      font-weight: bold
+      border-radius: 0px
+      border-left-width: 4px
+      border-left-style: solid
+      border-left-color: #FF6600
+      color: #E07418 !important
+      background-color: transparent !important
+    border-radius: 0px
 
 // Body =======================================================================
 
-.body-content
-  padding-top: 60px
-  // background-color: #41A0AD
+body
+  // fallback
+  background-color: #B1E7E7
+  background-repeat: repeat-x
+  // Safari 4-5, Chrome 1-9
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#B1E7E7), to(#fff))
+  // Safari 5.1, Chrome 10+
+  background: -webkit-linear-gradient(top, #fff, #B1E7E7)
+  // Firefox 3.6+
+  background: -moz-linear-gradient(top, #fff, #B1E7E7)
+  // IE 10
+  background: -ms-linear-gradient(top, #fff, #B1E7E7)
+  // Opera 11.10+
+  background: -o-linear-gradient(top, #fff, #B1E7E7)
 
-.center-block
-  float: none
+.body-content
+  padding-top: 70px
+  padding-bottom: 60px
 
 .img-title
   position: absolute
-  z-index: 1
   top: 0
   left: 0
   width: 100%
 
+.opaque
+  opacity: 0.8
+
+.center-block
+  float: none
+  display: block
+  margin-left: auto
+  margin-right: auto
+
 .btn-general
-  margin: 5px
   border-radius: 0px
   padding: 8px 10px 8px 10px
   font-size: 1.6rem
@@ -42,10 +100,6 @@
     color: white
     text-decoration: none
     outline: none
-
-#venue-map
-  height: 400px
-  width: auto
 
 #error_explanation
   color: red

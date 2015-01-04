@@ -7,7 +7,6 @@ class App.Views.HomePageView extends Backbone.View
     return
 
   gmap_show = (div, lat, lng, name, address, postal_code) ->
-    console.log "Displaying map"
     handler = Gmaps.build("Google") # map init
 
     isDraggable = (if $(document).width() > 480 then true else false)

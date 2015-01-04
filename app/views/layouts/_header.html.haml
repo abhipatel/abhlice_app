@@ -1,13 +1,14 @@
-.navbar.navbar-default.navbar-fixed-top
-  .container
-    .navbar-header
-      %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
-    .navbar-collapse.collapse
-      %ul.nav.navbar-nav.navbar-right
-        %li= link_to 'home', root_path
-        %li= link_to 'blog', '#'
-        - if Rails.env.development? && has_access?
-          %li= link_to 'logout', logout_path, method: "delete"
+- if has_access?
+  .navbar.navbar-default.navbar-fixed-top
+    .container
+      .navbar-header
+        %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+      .navbar-collapse.collapse
+        %ul.nav.navbar-nav.navbar-right
+          %li= link_to 'home', root_path
+          %li= link_to 'blog', '#'
+          - if Rails.env.development? && has_access?
+            %li= link_to 'logout', logout_path, method: "delete"
