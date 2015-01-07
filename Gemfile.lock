@@ -195,7 +195,6 @@ DEPENDENCIES
   rails-backbone!
   rails_12factor (= 0.0.2)
   rails_serve_static_assets
-  rails_stdout_logging
   sass (= 3.2.13)
   sass-rails (= 5.0.0.beta1)
   sdoc (= 0.4.0)
