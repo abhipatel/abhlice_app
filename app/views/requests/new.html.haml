@@ -1,0 +1,14 @@
+.row
+  .col-cs-12.col-sm-12.col-md-12
+    %h1 Music Request
+    %p Let us know what you like and we'll see if we can fit it into the playlist.
+  .col-xs-12.col-sm-6.col-sm-offset-1.col-md-6.col-md-offset-1
+    = form_for(@request, url: request_path) do |f|
+      = render 'shared/error_messages', object: @request
+      .form-group
+        %label.control-label{:for => "rsvpInputFrom"} From
+        %input#rsvpInputFrom.form-control{:placeholder => "Tell us who the request is from", :type => "text", :name => "request[from]"}
+      .form-group
+        %label.control-label{:for => "rsvpInputDetails"} Requests
+        %textarea#rsvpInputDetails.form-control{:placeholder => "Please include song title and singer/band", :type => "text", :name => "rsvp[details]", :rows => 5}
+      = f.submit "Submit", class: 'btn btn-general'
