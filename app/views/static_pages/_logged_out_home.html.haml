@@ -1,14 +1,16 @@
 .row
-  .center-block.col-xs-12.col-sm-9.col-md-9
-    = image_tag 'background/jersey.jpg', class: 'img-responsive frame'
-    .img-title
-      .row
-        .col-xs-11.col-xs-offset-1.col-sm-11.col-sm-offset-1.col-md-11.col-md-offset-1
-          %h1
-            Alice & Abhi
-      .row
-        = form_for(:session, url: login_path) do |f|
-          .col-xs-5.col-xs-offset-1.col-sm-4.col-sm-offset-1.col-md-4.col-md-offset-1
-            = f.text_field :password, placeholder: 'Enter password', class: 'form-control', id: 'login-input'
-          .col-xs-6.col-sm-7.col-md-7
-            = f.submit "Enter", class: 'btn btn-general opaque'
+  .col-xs-12.col-sm-6.col-md-6.picture-col.light-bg
+    .row
+      .col-md-12.text-center
+        %h1
+          Alice & Abhi
+    .row
+      .col-md-12
+        = image_tag 'background/jersey.jpg', class: 'img-responsive frame'
+  .col-xs-12.col-sm-6.col-md-6.login-input-col.dark-bg
+    .row#login-input
+      = form_for(:session, url: login_path) do |f|
+        .col-xs-6.col-sm-6.col-sm-offset-1.col-md-6.col-md-offset-1
+          = f.text_field :password, placeholder: 'Enter password', class: 'form-control'
+        .col-xs-6.col-sm-5.col-md-5
+          = f.submit "Enter", class: 'btn btn-general'

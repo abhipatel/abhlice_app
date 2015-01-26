@@ -51,26 +51,16 @@
 // Body =======================================================================
 
 body
-  // fallback
-  background-color: #B1E7E7
-  // height: 100%
-  // margin: 0
-  // Safari 4-5, Chrome 1-9
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFF), to(#B1E7E7))
-  // Safari 5.1, Chrome 10+
-  background: -webkit-linear-gradient(top, #B1E7E7, #FFF)
-  // Firefox 3.6+
-  background: -moz-linear-gradient(top, #B1E7E7, #FFF)
-  // IE 10
-  background: -ms-linear-gradient(top, #B1E7E7, #FFF)
-  // Opera 11.10+
-  background: -o-linear-gradient(top, #B1E7E7, #FFF)
-  background-repeat: no-repeat
-  background-attachment: fixed
+  background-color: #5D6766
 
 .body-content
   padding-top: 70px
   padding-bottom: 60px
+
+@media (min-width: 768px)
+  .body-content
+    margin-left: 70px
+    margin-right: 70px
 
 .img-title
   position: absolute
@@ -91,7 +81,8 @@ body
   border-radius: 0px
   padding: 8px 10px 8px 10px
   font-size: 1.6rem
-  background: #B4136E
+  // background: #B4136E
+  background: #870000
   text-align: center
   text-shadow: none
   color: white
@@ -113,3 +104,9 @@ body
 .field_with_errors
   .form-control
     color: red
+
+.dark-bg
+  background-color: #272B2C
+
+.light-bg
+  background-color: #A4A8A9

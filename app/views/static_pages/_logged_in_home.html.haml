@@ -1,32 +1,45 @@
 .row
-  .hidden-xs.col-sm-2.col-md-2#target-nav
-    %ul.nav.nav-pills.nav-stacked.nav-home{"data-offset-bottom" => "200", "data-offset-top" => "20", "data-spy" => "affix"}
-      %li.active= link_to "Venue", "#venue"
-      %li= link_to "Places to stay", "#accomodation"
-      %li= link_to "Attire", "#attire"
-      %li= link_to "Requests", "#requests"
-  .col-xs-11.col-sm-9.col-md-9
-    .row
-      .col-xs-12.col-sm-12.col-md-12
-        %h3#venue
-          Venue
-        #venue-map
-    .row
-      .col-xs-12.col-sm-12.col-md-12
-        %h3#accomodation
-          Places to stay
-        %p
-          Places to stay in Farnham....
-    .row
-      .col-xs-12.col-sm-12.col-md-12
-        %h3#attire
-          Attire
-        %p
-          Types of Indian clothes....
-    .row
-      .col-xs-12.col-sm-12.col-md-12
-        %h3#requests
-          Requests
-        %p
-          Let us know songs you'd like on the playlist.
-        = link_to "Requests", request_path , class: "btn btn-primary btn-general"
+  .col-md-12
+    %h3#venue
+      Venue
+.row
+  .col-xs-12.col-sm-10.col-md-10.center-block
+    #venue-map
+.row
+  .col-md-12
+    %h3#accomodation
+      Places to stay
+    %p
+      Northbrook Park has accommodation on site that can sleep up to 80 people, and can be booked either as individual rooms or the whole cottage (sleeping 8).
+      Unfortunately this accommodation is only available on the Saturday night.
+      Bookings can be made directly with Central Reservations on 0844 824777. See
+      = link_to "here", "http://www.northbrookparkmews.co.uk/"
+      for more information.
+
+      There are a number of other hotels in Farnham and the surrounding area that you can stay in.
+      On the Friday night Abhi will be staying
+      = link_to "here", "http://www.mercure.com/gb/hotel-6621-mercure-farnham-bush-hotel/index.shtml"
+      and Alice will be staying
+      = link_to "here", "http://www.bishopstable.com/index.htm"
+      \. You are welcome to join us at either and raise a glass with us ahead of the wedding day.
+      We will update the site with where we plan to spend the evening.
+
+      The other hotels in the area are:
+    %p= link_to "1 Park Row", "http://1parkrow.co.uk/"
+    %p= link_to "Best Western", "http://www.bestwestern.co.uk/hotels/frensham-pond-hotel-farnham-83620/hotel-info/default.aspx"
+    %p= link_to "Farnham House Hotel", "http://www.farnhamhousehotel.com/bedrooms/"
+    %p= link_to "Hotel de Vie", "http://www.hoteldevie.com/"
+    %p= link_to "The Princess Royal", "http://www.theprincessroyal.co.uk/bedrooms"
+.row
+  .col-xs-12.col-sm-12.col-md-12
+    %h3#attire
+      Attire
+    %p
+      Types of Indian clothes....
+.row
+  .col-xs-12.col-sm-12.col-md-12
+    %h3#requests
+      Requests
+    %p
+      Let us know songs you'd like on the playlist.
+    = link_to "Requests", request_path , class: "btn btn-primary btn-general"
