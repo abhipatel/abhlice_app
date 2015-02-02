@@ -9,7 +9,7 @@
     = csrf_meta_tags
     = render 'layouts/shim'
     = render 'layouts/header'
-  %body{"data-spy" => "scroll", "data-target" => "#target-nav", "offset" => "70"}
+  %body{"data-spy" => "scroll", "data-target" => "#target-nav", "data-offset" => "70"}
     .container-fluid.body-content
       = render 'shared/flash_messages'
       = yield
