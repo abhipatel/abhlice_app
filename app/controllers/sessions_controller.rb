@@ -1,11 +1,13 @@
 class SessionsController < ApplicationController
 
+  ENTRY_PASSWORD = ENV['ENTRY_PASSWORD']
+
   def new
   end
 
   def create
     password = params[:session][:password]
-    if password && password == 'AAJun15'
+    if password && password == ENTRY_PASSWORD
       sign_in
       flash[:success] = 'Thanks for getting involved!'
       redirect_to root_path
